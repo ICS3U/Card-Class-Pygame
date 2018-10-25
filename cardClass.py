@@ -15,7 +15,15 @@ class Card:
         return '{0} of {1}'.format(Card.VALS[self.vals],
                                    Card.SUITS[self.suit])
 
+    def diamond(x, y, width, height, color):
+        pygame.draw.polygon(Display, color, ((x, y), (x + width/2, y + height/2), (x, y + height), (x - width/2, y + height/2)))
 
+
+     
+            
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
+
+            
+#    Card.diamond(100, 0, 100, 150, (random.randint(1, 255), random.randint(1, 255), random.randint(1, 255))) example run thing            
