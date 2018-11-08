@@ -98,3 +98,10 @@ class Card:
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
+     def heart(x,y,colour):
+        pg.draw.ellipse(screen,colour,(x-10,y,32,32))
+        pg.draw.ellipse(screen,colour,(x+10,y,32,32))
+        pg.draw.polygon(screen,colour,((x-9,y+20),(x+40,y+20),(x+16,y+55)))
+        pg.display.flip()
+    heart(100,100,(random.randint(0,255,),random.randint(0,255),random.randint(0,255)))
+    
